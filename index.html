@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Algo Trader — Automated Trading Tools</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Algo Trader — build, backtest and run algorithmic trading strategies with easy UI and reliable infra.">
+  <style>
+    :root{--accent:theme(colors.teal.600);}
+    .glass{background:rgba(255,255,255,0.06);backdrop-filter:blur(6px)}
+  </style>
+</head>
+<body class="bg-gradient-to-b from-slate-50 to-white text-slate-800">
+  <header class="container mx-auto p-6 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-500 to-indigo-600 flex items-center justify-center text-white font-bold">AT</div>
+      <div>
+        <h1 class="text-xl font-semibold">Algo Trader</h1>
+        <p class="text-xs text-slate-500">Automate. Backtest. Execute.</p>
+      </div>
+    </a>
+    <nav class="hidden md:flex gap-6 items-center text-sm">
+      <a href="#features" class="hover:text-teal-600">Features</a>
+      <a href="#backtest" class="hover:text-teal-600">Backtest</a>
+      <a href="#pricing" class="hover:text-teal-600">Pricing</a>
+      <a href="#contact" class="hover:text-teal-600">Contact</a>
+      <a href="#" class="px-4 py-2 rounded-md bg-teal-600 text-white text-sm">Sign up</a>
+    </nav>
+    <div class="md:hidden">
+      <button id="menuBtn" class="p-2 rounded-md glass">Menu</button>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6">
+    <section class="grid md:grid-cols-2 gap-8 items-center pt-8">
+      <div>
+        <h2 class="text-4xl font-extrabold leading-tight">Build high-confidence algorithmic strategies — without complex ops.</h2>
+        <p class="mt-4 text-slate-600">Design, backtest and deploy automated trading strategies with an intuitive UI, fast backtest engine and reliable execution infrastructure.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#" class="px-5 py-3 rounded-md bg-teal-600 text-white shadow">Create a strategy</a>
+          <a href="#backtest" class="px-5 py-3 rounded-md border border-slate-200">See backtests</a>
+        </div>
+
+        <ul class="mt-6 grid grid-cols-2 gap-3 text-sm text-slate-600">
+          <li>✅ Fast historical backtests</li>
+          <li>✅ Live strategy monitoring</li>
+          <li>✅ Strategy versioning</li>
+          <li>✅ Secure cloud run-time</li>
+        </ul>
+      </div>
+
+      <div class="bg-gradient-to-br from-white to-slate-50 rounded-2xl p-6 shadow-lg">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-xs text-slate-500">Portfolio</p>
+            <p class="text-2xl font-semibold">$124,380</p>
+          </div>
+          <div class="text-sm text-slate-500">+6.2% last 30 days</div>
+        </div>
+        <div class="mt-6">
+          <div class="h-40 bg-slate-100 rounded-lg flex items-center justify-center text-slate-400">[Chart placeholder]</div>
+        </div>
+        <div class="mt-4 flex gap-2">
+          <button class="px-3 py-2 rounded-md border border-slate-200">View strategies</button>
+          <button class="px-3 py-2 rounded-md bg-indigo-600 text-white">Deploy new</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="mt-16">
+      <h3 class="text-2xl font-bold">Features</h3>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-xl shadow-sm bg-white">
+          <h4 class="font-semibold">Backtesting engine</h4>
+          <p class="mt-2 text-sm text-slate-600">Run high-speed historical tests with realistic slippage and order modeling.</p>
+        </div>
+        <div class="p-6 rounded-xl shadow-sm bg-white">
+          <h4 class="font-semibold">Strategy studio</h4>
+          <p class="mt-2 text-sm text-slate-600">Visual editor + code editor for building strategies in Python or JS.</p>
+        </div>
+        <div class="p-6 rounded-xl shadow-sm bg-white">
+          <h4 class="font-semibold">Monitoring & alerts</h4>
+          <p class="mt-2 text-sm text-slate-600">Real-time logs, notifications and automated failover to keep strategies running.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="backtest" class="mt-16">
+      <div class="flex items-center justify-between">
+        <h3 class="text-2xl font-bold">Backtest examples</h3>
+        <a href="#" class="text-sm hover:underline">See all backtests</a>
+      </div>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <article class="p-4 bg-white rounded-xl shadow-sm">
+          <h4 class="font-semibold">Momentum Strategy</h4>
+          <p class="text-sm mt-2 text-slate-600">30-day momentum with adaptive position sizing.</p>
+          <div class="mt-4 text-sm text-slate-500">Return: 18.4% · Max drawdown: 6.3%</div>
+        </article>
+        <article class="p-4 bg-white rounded-xl shadow-sm">
+          <h4 class="font-semibold">Mean Reversion</h4>
+          <p class="text-sm mt-2 text-slate-600">Reverts to short-term mean with volatility filter.</p>
+          <div class="mt-4 text-sm text-slate-500">Return: 12.1% · Max drawdown: 4.7%</div>
+        </article>
+        <article class="p-4 bg-white rounded-xl shadow-sm">
+          <h4 class="font-semibold">Breakout System</h4>
+          <p class="text-sm mt-2 text-slate-600">Breakouts with trailing stop and scaling entry.</p>
+          <div class="mt-4 text-sm text-slate-500">Return: 21.0% · Max drawdown: 9.1%</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" class="mt-16">
+      <h3 class="text-2xl font-bold">Pricing</h3>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-xl bg-white shadow">
+          <h4 class="font-semibold">Starter</h4>
+          <p class="mt-2 text-3xl font-bold">₹499/mo</p>
+          <ul class="mt-4 text-sm text-slate-600">
+            <li>1 active strategy</li>
+            <li>Backtests up to 1 year</li>
+            <li>Email support</li>
+          </ul>
+          <button class="mt-6 w-full py-2 rounded-md bg-teal-600 text-white">Choose</button>
+        </div>
+
+        <div class="p-6 rounded-xl bg-white shadow">
+          <h4 class="font-semibold">Pro</h4>
+          <p class="mt-2 text-3xl font-bold">₹1,499/mo</p>
+          <ul class="mt-4 text-sm text-slate-600">
+            <li>10 active strategies</li>
+            <li>Backtests up to 5 years</li>
+            <li>Priority support</li>
+          </ul>
+          <button class="mt-6 w-full py-2 rounded-md border border-slate-200">Choose</button>
+        </div>
+
+        <div class="p-6 rounded-xl bg-white shadow">
+          <h4 class="font-semibold">Enterprise</h4>
+          <p class="mt-2 text-3xl font-bold">Contact us</p>
+          <ul class="mt-4 text-sm text-slate-600">
+            <li>Custom infra</li>
+            <li>Dedicated SLAs</li>
+            <li>Onboarding & training</li>
+          </ul>
+          <button class="mt-6 w-full py-2 rounded-md bg-indigo-600 text-white">Contact sales</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="mt-16 mb-20 grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h3 class="text-2xl font-bold">Get in touch</h3>
+        <p class="mt-2 text-slate-600">Questions about features, enterprise plans, or integrations? Drop us a message.</p>
+        <div class="mt-6 space-y-3 text-sm text-slate-600">
+          <div>📧 hello@algotrader.example</div>
+          <div>📞 +91 90000 00000</div>
+        </div>
+      </div>
+      <form class="bg-white p-6 rounded-xl shadow">
+        <label class="block text-sm">Name
+          <input class="mt-2 w-full border rounded-md p-2" placeholder="Your name"></input>
+        </label>
+        <label class="block text-sm mt-4">Email
+          <input class="mt-2 w-full border rounded-md p-2" placeholder="you@example.com"></input>
+        </label>
+        <label class="block text-sm mt-4">Message
+          <textarea class="mt-2 w-full border rounded-md p-2" rows="4" placeholder="Tell us about your use case"></textarea>
+        </label>
+        <div class="mt-4 text-right">
+          <button class="px-4 py-2 rounded-md bg-teal-600 text-white">Send</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="border-t py-6 mt-12">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <div class="text-sm text-slate-500">© Algo Trader — All rights reserved.</div>
+      <div class="text-sm text-slate-500">Privacy · Terms</div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    if(btn){ btn.addEventListener('click', ()=> alert('Mobile menu — implement as needed')); }
+  </script>
+</body>
+</html>
